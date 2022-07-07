@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+// eslint-disable
+
+import React, {Component} from 'react';
 import './App.css';
+
+class AddNumber extends Component{
+  render(){
+    return (
+      <div>
+        <h1>Add Number</h1>
+        <div class="inpBox">
+          <input type="button" value="+" />
+          <input type="text" defaultValue="0" />
+        </div>
+      </div>
+    )
+  }
+}
+
+class AddNumberRoot extends Component{
+  render(){
+    return (
+      <div>
+        <h1>Add Number Root</h1>
+        <AddNumber />
+      </div>
+    )
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Root</h1>
+      <AddNumberRoot />
+      <DisplayNumberRoot />
     </div>
   );
 }
+
+class DisplayNumber extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Display Number</h1>
+        <input type="text" value="0" readOnly></input>
+      </div>
+    );
+  }
+} 
+
+class DisplayNumberRoot extends Component {
+  render(){
+    return (
+      <div>
+        <h1>Display Number Root</h1>
+        <DisplayNumber />
+      </div>
+    );
+  }
+} 
 
 export default App;
