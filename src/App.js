@@ -2,31 +2,7 @@
 
 import React, {Component} from 'react';
 import './App.css';
-
-class AddNumber extends Component{
-  render(){
-    return (
-      <div>
-        <h1>Add Number</h1>
-        <div class="inpBox">
-          <input type="button" value="+" />
-          <input type="text" defaultValue="0" />
-        </div>
-      </div>
-    )
-  }
-}
-
-class AddNumberRoot extends Component{
-  render(){
-    return (
-      <div>
-        <h1>Add Number Root</h1>
-        <AddNumber />
-      </div>
-    )
-  }
-}
+import AddNumberRoot from './components/AddNumberRoot';
 
 function App() {
   return (
